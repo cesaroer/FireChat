@@ -15,7 +15,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
         //HECHO por césar
-        guard let scene = (scene as? UIWindowScene) else { return }
+        //Making ConversationsController the root view controller
+        guard let scene = (scene as? UIWindowScene)  else { return }
         window = UIWindow(windowScene: scene)
         let nav = UINavigationController(rootViewController: ConversationsController())
         window?.rootViewController = nav
