@@ -81,18 +81,18 @@ extension UIView {
 }
 
 
-//
-//extension UIViewController {
-//    static let hud = JGProgressHUD(style: .dark)
-//
-//    func configureGradientLayer() {
-//        let gradient = CAGradientLayer()
-//        gradient.colors = [UIColor.systemPurple.cgColor, UIColor.systemPink.cgColor]
-//        gradient.locations = [0, 1]
-//        view.layer.addSublayer(gradient)
-//        gradient.frame = view.frame
-//    }
-//
+
+extension UIViewController {
+    //static let hud = JGProgressHUD(style: .dark)
+
+    func configureGradientLayer() {
+        let gradient = CAGradientLayer()
+        gradient.colors = [UIColor.systemPurple.cgColor, UIColor.systemPink.cgColor]
+        gradient.locations = [0, 1]
+        view.layer.addSublayer(gradient)
+        gradient.frame = view.frame
+    }
+
 //    func showLoader(_ show: Bool, withText text: String? = "Loading") {
 //        view.endEditing(true)
 //        UIViewController.hud.textLabel.text = text
@@ -103,7 +103,7 @@ extension UIView {
 //            UIViewController.hud.dismiss()
 //        }
 //    }
-//
+
 //    func configureNavigationBar(withTitle title: String, prefersLargeTitles: Bool) {
 //        let appearance = UINavigationBarAppearance()
 //        appearance.configureWithOpaqueBackground()
@@ -121,10 +121,10 @@ extension UIView {
 //
 //        navigationController?.navigationBar.overrideUserInterfaceStyle = .dark
 //    }
-//
+
 //    func showError(_ errorMessage: String) {
 //        let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
 //        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
 //        present(alert, animated: true, completion: nil)
 //    }
-//}
+}
