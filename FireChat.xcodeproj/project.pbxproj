@@ -16,6 +16,7 @@
 		00277AB725DDEAA000F44213 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00277AB625DDEAA000F44213 /* Assets.xcassets */; };
 		00277ABA25DDEAA000F44213 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00277AB825DDEAA000F44213 /* LaunchScreen.storyboard */; };
 		00277AC925DDEB6700F44213 /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00277AC825DDEB6700F44213 /* ConversationsController.swift */; };
+		0040ABEC25E5CECC001F8475 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0040ABEB25E5CECC001F8475 /* LoginViewModel.swift */; };
 		00EDB64825DF635F0075E193 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EDB64725DF635F0075E193 /* LoginController.swift */; };
 		00EDB64B25DF636E0075E193 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EDB64A25DF636E0075E193 /* RegistrationController.swift */; };
 		00EDB64E25DF685B0075E193 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EDB64D25DF685B0075E193 /* Extensions.swift */; };
@@ -33,6 +34,7 @@
 		00277AB925DDEAA000F44213 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00277ABB25DDEAA000F44213 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00277AC825DDEB6700F44213 /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
+		0040ABEB25E5CECC001F8475 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		00EDB64725DF635F0075E193 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		00EDB64A25DF636E0075E193 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		00EDB64D25DF685B0075E193 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 		00277AC525DDEAEB00F44213 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0040ABEB25E5CECC001F8475 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				00EDB64B25DF636E0075E193 /* RegistrationController.swift in Sources */,
 				00EDB64825DF635F0075E193 /* LoginController.swift in Sources */,
 				00EDB64E25DF685B0075E193 /* Extensions.swift in Sources */,
+				0040ABEC25E5CECC001F8475 /* LoginViewModel.swift in Sources */,
 				00101A1D25E0975D00605140 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
