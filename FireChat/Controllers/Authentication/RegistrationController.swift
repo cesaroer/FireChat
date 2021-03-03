@@ -50,6 +50,7 @@ class RegistrationController: UIViewController  {
     private let emailTextField : CustomTextField = {
         let textField = CustomTextField(placeHolder: "Email")
         textField.keyboardType = .emailAddress
+        textField.autocapitalizationType = .none
         return textField
      }()
     
