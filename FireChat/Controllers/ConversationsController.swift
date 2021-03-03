@@ -68,6 +68,19 @@ class ConversationsController: UIViewController {
 
         let image = UIImage(systemName: "person.circle.fill")
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(showProfie))
+        
+         let logo = UIImage(named: "snap")
+         let logoContainer = UIView(frame: CGRect(x: 0, y: 0, width: 37, height: 37))
+         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 37, height: 37))
+         imageView.contentMode = .scaleAspectFit
+         imageView.image = logo
+         imageView.backgroundColor = .yellow
+         imageView.layer.masksToBounds = true
+         imageView.layer.cornerRadius = 8
+         imageView.layer.borderWidth = 1
+         imageView.layer.borderColor = UIColor.black.cgColor
+         logoContainer.addSubview(imageView)
+         navigationItem.titleView = logoContainer
     }
     
     func configureTableView() {
