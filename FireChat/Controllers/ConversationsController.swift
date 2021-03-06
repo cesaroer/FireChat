@@ -15,6 +15,16 @@ class ConversationsController: UIViewController {
     
     //MARK: - Properties
     private let tableView = UITableView()
+    private let newMessageBtn : UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "plus"), for: .normal)
+        button.backgroundColor = .systemPurple
+        button.tintColor = .white
+        button.imageView?.setDimensions(height: 24, width: 24)
+        button.addTarget(self, action: #selector(showNewMessagecontroller), for: .touchUpInside)
+        
+        return button
+    }()
     
     //MARK: - lifeCycle
     
@@ -29,6 +39,15 @@ class ConversationsController: UIViewController {
     
     @objc func showProfie() {
         logout()
+    }
+    
+    @objc func showNewMessagecontroller() {
+        let controller = NewMessageController()
+//        let navController = UINavigationController(rootViewController: controller)
+//        navController.modalPresentationStyle = .fullScreen
+//        present(navController, animated: true, completion: nil)
+        
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     //MARK: - API
@@ -70,6 +89,12 @@ class ConversationsController: UIViewController {
         let image = UIImage(systemName: "person.circle.fill")
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(showProfie))
         
+        view.addSubview(newMessageBtn)
+        newMessageBtn.setDimensions(height: 56, width: 56)
+        newMessageBtn.layer.cornerRadius = 56 / 2
+        newMessageBtn.anchor(bottom: view.bottomAnchor, right: view.rightAnchor, paddingBottom: 60, paddingRight: 24)
+        
+        //Image Like Snapchat
          let logo = UIImage(named: "snap")
          let logoContainer = UIView(frame: CGRect(x: 0, y: 0, width: 37, height: 37))
          let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 37, height: 37))
