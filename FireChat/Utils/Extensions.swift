@@ -6,7 +6,7 @@
 //
 
 import UIKit
-//import JGProgressHUD
+import JGProgressHUD
 
 extension UIView {
     func anchor(top: NSLayoutYAxisAnchor? = nil,
@@ -83,7 +83,7 @@ extension UIView {
 
 
 extension UIViewController {
-    //static let hud = JGProgressHUD(style: .dark)
+    static let hud = JGProgressHUD(style: .dark)
 
     func configureGradientLayer() {
         let gradient = CAGradientLayer()
@@ -93,38 +93,38 @@ extension UIViewController {
         gradient.frame = view.frame
     }
 
-//    func showLoader(_ show: Bool, withText text: String? = "Loading") {
-//        view.endEditing(true)
-//        UIViewController.hud.textLabel.text = text
-//
-//        if show {
-//            UIViewController.hud.show(in: view)
-//        } else {
-//            UIViewController.hud.dismiss()
-//        }
-//    }
+    func showLoader(_ show: Bool, withText text: String? = "Loading") {
+        view.endEditing(true)
 
-//    func configureNavigationBar(withTitle title: String, prefersLargeTitles: Bool) {
-//        let appearance = UINavigationBarAppearance()
-//        appearance.configureWithOpaqueBackground()
-//        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-//        appearance.backgroundColor = .systemPurple
-//
-//        navigationController?.navigationBar.standardAppearance = appearance
-//        navigationController?.navigationBar.compactAppearance = appearance
-//        navigationController?.navigationBar.scrollEdgeAppearance = appearance
-//
-//        navigationController?.navigationBar.prefersLargeTitles = prefersLargeTitles
-//        navigationItem.title = title
-//        navigationController?.navigationBar.tintColor = .white
-//        navigationController?.navigationBar.isTranslucent = true
-//
-//        navigationController?.navigationBar.overrideUserInterfaceStyle = .dark
-//    }
+        if show {
+            UIViewController.hud.textLabel.text = text
+            UIViewController.hud.show(in: view)
+        } else {
+            UIViewController.hud.dismiss()
+        }
+    }
 
-//    func showError(_ errorMessage: String) {
-//        let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
-//        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
-//        present(alert, animated: true, completion: nil)
-//    }
+    func configureNavigationBar(withTitle title: String, prefersLargeTitles: Bool) {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.backgroundColor = .systemPurple
+
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+
+        navigationController?.navigationBar.prefersLargeTitles = prefersLargeTitles
+        navigationItem.title = title
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.isTranslucent = true
+
+        navigationController?.navigationBar.overrideUserInterfaceStyle = .dark
+    }
+
+    func showError(_ errorMessage: String) {
+        let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
 }
