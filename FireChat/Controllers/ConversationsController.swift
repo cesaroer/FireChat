@@ -43,11 +43,11 @@ class ConversationsController: UIViewController {
     
     @objc func showNewMessagecontroller() {
         let controller = NewMessageController()
-//        let navController = UINavigationController(rootViewController: controller)
-//        navController.modalPresentationStyle = .fullScreen
-//        present(navController, animated: true, completion: nil)
+        let navController = UINavigationController(rootViewController: controller)
+        navController.modalPresentationStyle = .fullScreen
+        present(navController, animated: true, completion: nil)
         
-        self.navigationController?.pushViewController(controller, animated: true)
+        //self.navigationController?.pushViewController(controller, animated: true)
     }
     
     //MARK: - API
@@ -83,7 +83,7 @@ class ConversationsController: UIViewController {
     
     func configureUI() {
         view.backgroundColor = .white
-        configureNavigationBar()
+        configureNavigationBar(withTitle: "Messages", prefersLargeTitles: true)
         configureTableView()
 
         let image = UIImage(systemName: "person.circle.fill")
@@ -122,29 +122,11 @@ class ConversationsController: UIViewController {
         tableView.frame = view.frame
         
     }
-    
-    func configureNavigationBar() {
-        
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.backgroundColor = .systemPurple
-        
-        navigationController?.navigationBar.standardAppearance = appearance
-        navigationController?.navigationBar.compactAppearance = appearance //when make scroll up
-        navigationController?.navigationBar.scrollEdgeAppearance = appearance
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "Messages"
-        navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.isTranslucent =  true
-        
-        // Con esto ya funciona pero no se pone en blanco desde un inicio
-        navigationController!.navigationBar.overrideUserInterfaceStyle = .dark
-        //Con esto ya se pone en blanco desde un inicio pero deben ir las dos lineas de Code
-        navigationController?.navigationBar.barStyle = .black
-    }
+
 
 }
+
+//MARK: - UITableViewDataSource
 
 extension ConversationsController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -161,6 +143,7 @@ extension ConversationsController: UITableViewDataSource {
     
 }
 
+//MARK: - UITableViewDelegate
 extension ConversationsController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)

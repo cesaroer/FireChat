@@ -119,7 +119,10 @@ extension UIViewController {
         navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.isTranslucent = true
 
-        navigationController?.navigationBar.overrideUserInterfaceStyle = .dark
+        // Con esto ya funciona pero no se pone en blanco desde un inicio
+        navigationController!.navigationBar.overrideUserInterfaceStyle = .dark
+        //Con esto ya se pone en blanco desde un inicio pero deben ir las dos lineas de Code
+        navigationController?.navigationBar.barStyle = .black
     }
 
     func showError(_ errorMessage: String) {
