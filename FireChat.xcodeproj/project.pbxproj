@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		00101A1A25E093F100605140 /* InputContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00101A1925E093F100605140 /* InputContainerView.swift */; };
 		00101A1D25E0975D00605140 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00101A1C25E0975D00605140 /* CustomTextField.swift */; };
+		0019824C25F34F8400B37AAD /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019824B25F34F8400B37AAD /* AuthService.swift */; };
 		00277AAE25DDEA9D00F44213 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00277AAD25DDEA9D00F44213 /* AppDelegate.swift */; };
 		00277AB025DDEA9D00F44213 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00277AAF25DDEA9D00F44213 /* SceneDelegate.swift */; };
 		00277AB225DDEA9D00F44213 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00277AB125DDEA9D00F44213 /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		00101A1925E093F100605140 /* InputContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputContainerView.swift; sourceTree = "<group>"; };
 		00101A1C25E0975D00605140 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		0019824B25F34F8400B37AAD /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		00277AAA25DDEA9D00F44213 /* FireChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00277AAD25DDEA9D00F44213 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00277AAF25DDEA9D00F44213 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0019824825F34F6300B37AAD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0019824A25F34F7100B37AAD /* API */ = {
+			isa = PBXGroup;
+			children = (
+				0019824B25F34F8400B37AAD /* AuthService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		00277AA125DDEA9D00F44213 = {
 			isa = PBXGroup;
 			children = (
@@ -81,11 +98,11 @@
 		00277AAC25DDEA9D00F44213 /* FireChat */ = {
 			isa = PBXGroup;
 			children = (
-				00277AC225DDEAC500F44213 /* Model */,
+				0019824825F34F6300B37AAD /* Model */,
 				00277AC625DDEAEE00F44213 /* View */,
 				00277AC525DDEAEB00F44213 /* ViewModel */,
 				00277AC425DDEAE200F44213 /* Controllers */,
-				00277AC325DDEAE100F44213 /* API */,
+				0019824A25F34F7100B37AAD /* API */,
 				00277AC725DDEB0400F44213 /* Utils */,
 				00277AAD25DDEA9D00F44213 /* AppDelegate.swift */,
 				00277AAF25DDEA9D00F44213 /* SceneDelegate.swift */,
@@ -97,20 +114,6 @@
 				00277ABB25DDEAA000F44213 /* Info.plist */,
 			);
 			path = FireChat;
-			sourceTree = "<group>";
-		};
-		00277AC225DDEAC500F44213 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		00277AC325DDEAE100F44213 /* API */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = API;
 			sourceTree = "<group>";
 		};
 		00277AC425DDEAE200F44213 /* Controllers */ = {
@@ -171,7 +174,6 @@
 				489F162BD00CF21448734901 /* Pods-FireChat.debug.xcconfig */,
 				8DCF3C24C826419874440CB5 /* Pods-FireChat.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -301,6 +303,7 @@
 				00277AB225DDEA9D00F44213 /* ViewController.swift in Sources */,
 				0040ABEF25E5F816001F8475 /* RegistrationViewModel.swift in Sources */,
 				00101A1A25E093F100605140 /* InputContainerView.swift in Sources */,
+				0019824C25F34F8400B37AAD /* AuthService.swift in Sources */,
 				00277AAE25DDEA9D00F44213 /* AppDelegate.swift in Sources */,
 				00277AC925DDEB6700F44213 /* ConversationsController.swift in Sources */,
 				00277AB025DDEA9D00F44213 /* SceneDelegate.swift in Sources */,
