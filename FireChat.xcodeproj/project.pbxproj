@@ -21,6 +21,7 @@
 		0040ABEC25E5CECC001F8475 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0040ABEB25E5CECC001F8475 /* LoginViewModel.swift */; };
 		0040ABEF25E5F816001F8475 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0040ABEE25E5F816001F8475 /* RegistrationViewModel.swift */; };
 		0056215325EAB183007A75DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0056215225EAB183007A75DD /* GoogleService-Info.plist */; };
+		00839A0A25F71E5B009DF374 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00839A0925F71E5B009DF374 /* UserCell.swift */; };
 		00EDB64825DF635F0075E193 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EDB64725DF635F0075E193 /* LoginController.swift */; };
 		00EDB64B25DF636E0075E193 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EDB64A25DF636E0075E193 /* RegistrationController.swift */; };
 		00EDB64E25DF685B0075E193 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EDB64D25DF685B0075E193 /* Extensions.swift */; };
@@ -44,6 +45,7 @@
 		0040ABEB25E5CECC001F8475 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		0040ABEE25E5F816001F8475 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		0056215225EAB183007A75DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		00839A0925F71E5B009DF374 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		00EDB64725DF635F0075E193 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		00EDB64A25DF636E0075E193 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		00EDB64D25DF685B0075E193 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				00EDB64625DF63470075E193 /* Authentication */,
 				00277AC825DDEB6700F44213 /* ConversationsController.swift */,
 				0019824E25F361B000B37AAD /* NewMessageController.swift */,
+				00839A0925F71E5B009DF374 /* UserCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				0019824C25F34F8400B37AAD /* AuthService.swift in Sources */,
 				00277AAE25DDEA9D00F44213 /* AppDelegate.swift in Sources */,
 				00277AC925DDEB6700F44213 /* ConversationsController.swift in Sources */,
+				00839A0A25F71E5B009DF374 /* UserCell.swift in Sources */,
 				00277AB025DDEA9D00F44213 /* SceneDelegate.swift in Sources */,
 				00EDB64B25DF636E0075E193 /* RegistrationController.swift in Sources */,
 				00EDB64825DF635F0075E193 /* LoginController.swift in Sources */,
