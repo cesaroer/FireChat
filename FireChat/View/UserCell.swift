@@ -6,13 +6,21 @@
 //
 
 import UIKit
+import SDWebImage
 
 class UserCell: UITableViewCell {
     
     //MARK: - Properties
+    var user: User? {
+        didSet{
+            configure()
+        }
+    }
+    
     private let profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .systemPurple
+        imageView.tintColor = .white
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         return imageView
@@ -56,4 +64,13 @@ class UserCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Helpers
+    func configure() {
+        guard let user = user else {return}
+        fullNameLabel.text = user.fullname
+        userNameLabel.text = user.username
+                
+        guard let url = URL(string: user.profileImageUrl) else { return }
+        profileImageView.sd_setImage(with: url, placeholderImage: UIImage(systemName: "person.fill"))
+    }
 }
