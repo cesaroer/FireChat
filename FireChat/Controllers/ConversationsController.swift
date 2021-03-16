@@ -43,6 +43,7 @@ class ConversationsController: UIViewController {
     
     @objc func showNewMessagecontroller() {
         let controller = NewMessageController()
+        controller.delegate = self
         let navController = UINavigationController(rootViewController: controller)
         navController.modalPresentationStyle = .fullScreen
         present(navController, animated: true, completion: nil)
@@ -148,6 +149,16 @@ extension ConversationsController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
     }
+}
+
+//MARK: -  NewMessageControllerDelegate
+extension ConversationsController: NewMessageControllerDelegate {
+    func controller(_ controller: NewMessageController, wantsToStartChatWith user: User) {
+        controller.dismiss(animated: true, completion: nil)
+        let chat =  ChatController(user: user)
+        navigationController?.pushViewController(chat, animated: true)
+    }
+    
 }
 
 

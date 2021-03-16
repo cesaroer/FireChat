@@ -24,6 +24,7 @@
 		00839A0A25F71E5B009DF374 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00839A0925F71E5B009DF374 /* UserCell.swift */; };
 		00839A0D25F7293F009DF374 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00839A0C25F7293F009DF374 /* User.swift */; };
 		00839A1025F729D4009DF374 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00839A0F25F729D4009DF374 /* Service.swift */; };
+		00E8D57226007F0F0050AF9E /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E8D57126007F0F0050AF9E /* ChatController.swift */; };
 		00EDB64825DF635F0075E193 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EDB64725DF635F0075E193 /* LoginController.swift */; };
 		00EDB64B25DF636E0075E193 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EDB64A25DF636E0075E193 /* RegistrationController.swift */; };
 		00EDB64E25DF685B0075E193 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EDB64D25DF685B0075E193 /* Extensions.swift */; };
@@ -50,6 +51,7 @@
 		00839A0925F71E5B009DF374 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		00839A0C25F7293F009DF374 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		00839A0F25F729D4009DF374 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		00E8D57126007F0F0050AF9E /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 		00EDB64725DF635F0075E193 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		00EDB64A25DF636E0075E193 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		00EDB64D25DF685B0075E193 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				00EDB64625DF63470075E193 /* Authentication */,
 				00277AC825DDEB6700F44213 /* ConversationsController.swift */,
 				0019824E25F361B000B37AAD /* NewMessageController.swift */,
+				00E8D57126007F0F0050AF9E /* ChatController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				00EDB64825DF635F0075E193 /* LoginController.swift in Sources */,
 				00EDB64E25DF685B0075E193 /* Extensions.swift in Sources */,
 				0040ABEC25E5CECC001F8475 /* LoginViewModel.swift in Sources */,
+				00E8D57226007F0F0050AF9E /* ChatController.swift in Sources */,
 				00101A1D25E0975D00605140 /* CustomTextField.swift in Sources */,
 				0019824F25F361B000B37AAD /* NewMessageController.swift in Sources */,
 			);
