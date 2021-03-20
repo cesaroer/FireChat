@@ -12,6 +12,13 @@ class ChatController: UICollectionViewController {
     //MARK: - Properties
     private let mUser : User
     
+    internal lazy var customInputView: CustomInputAccessoryView = {
+        let iv = CustomInputAccessoryView(frame: CGRect(x: 0, y: 0,
+                                                        width: view.frame.width, height: 50))
+        
+        return iv
+    }()
+    
     
     
     //MARK: - LifeCycle
@@ -31,6 +38,19 @@ class ChatController: UICollectionViewController {
         
         print("DEBUG: User in chat controller is \(mUser.username)")
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
+    override var inputAccessoryView: UIView? {
+        get {return customInputView}
+    }
+    
+    override var canBecomeFirstResponder: Bool {
+        return true
     }
     
     //MARK: - Helpers
@@ -53,5 +73,6 @@ class ChatController: UICollectionViewController {
          imageView.layer.borderColor = UIColor.black.cgColor
          logoContainer.addSubview(imageView)
          navigationItem.titleView = logoContainer
+         navigationItem.title =  mUser.username
     }
 }
