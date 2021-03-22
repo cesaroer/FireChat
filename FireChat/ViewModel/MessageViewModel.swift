@@ -22,6 +22,20 @@ struct MessageViewModel {
             .white
     }
     
+    var rightAnchorActive : Bool {
+        return message.isFromCurrentUser
+    }
+    
+    
+    var leftAnchorActive: Bool {
+        return !message.isFromCurrentUser
+    }
+    
+    var souldHideProfileImage: Bool {
+        return message.isFromCurrentUser
+    }
+    
+    
     init(message: Message) {
         self.message = message
     }
