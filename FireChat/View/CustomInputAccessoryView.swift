@@ -17,7 +17,7 @@ public class CustomInputAccessoryView: UIView {
     //MARK: - Properties
     weak var delegate: CustomInputAccesoryViewDelegate?
     
-    public lazy var messageInputTextView: UITextView = {
+    private lazy var messageInputTextView: UITextView = {
         let tv = UITextView()
         tv.font = UIFont.systemFont(ofSize: 16)
         tv.isScrollEnabled = false
@@ -95,6 +95,14 @@ public class CustomInputAccessoryView: UIView {
     
     @objc func handleTextInoutChange() {
         placeHolderLabel.isHidden = !self.messageInputTextView.text.isEmpty
+    }
+    
+    
+    //MARK: Helpers
+    
+    func clearMessageText() {
+        messageInputTextView.text = nil
+        placeHolderLabel.isHidden = false
     }
     
 }

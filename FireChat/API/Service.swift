@@ -27,6 +27,30 @@ struct Service {
     }
     
     
+    static func fetchMessages(froUser user: User, completion: @escaping([Message]) -> Void) {
+        
+        var messages = [Message]()
+        guard let currentUUID = Auth.auth().currentUser?.uid else {return}
+        
+        let query = COLLECTION_MESSAGES.document(currentUUID).collection(user.uid).order(by: "timeStamp")
+        query.addSnapshotListener { (snapShot, error) in
+            
+            // This help us to make the real time chat
+            snapShot?.documentChanges.forEach({ (change) in
+                
+                //Aqui decimos que cachamos todo lo que su cambio es de tipo added, o sea lo que se acaba de añadir al documento
+                if change.type == .added {
+                    let dictionary = change.document.data()
+                    
+                    messages.append(Message(dictionary: dictionary))
+                    completion(messages)
+                }
+            })
+        }
+
+    }
+    
+    
     static func uploadMessage(_ message: String, to user: User, completion: ((Error?) -> Void)?) {
         
         guard let currentUUID = Auth.auth().currentUser?.uid else {return}

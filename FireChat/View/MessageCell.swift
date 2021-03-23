@@ -22,7 +22,6 @@ class MessageCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        imageView.backgroundColor = .lightGray
         return imageView
     }()
     
@@ -86,6 +85,7 @@ class MessageCell: UICollectionViewCell {
         bubbleLeftAnchor.isActive = viewModel.leftAnchorActive
         bubbleRigthAnchor.isActive = viewModel.rightAnchorActive
         profileImageView.isHidden = viewModel.souldHideProfileImage
+        profileImageView.sd_setImage(with: viewModel.profileImageUrl)
     }
     
     
