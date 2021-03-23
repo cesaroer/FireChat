@@ -23,6 +23,7 @@
 		0056215325EAB183007A75DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0056215225EAB183007A75DD /* GoogleService-Info.plist */; };
 		00772DB82608172D00D9F0FC /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00772DB72608172D00D9F0FC /* Message.swift */; };
 		00772DBB26081B8700D9F0FC /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00772DBA26081B8700D9F0FC /* MessageViewModel.swift */; };
+		00772DC02609A27A00D9F0FC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00772DBF2609A27A00D9F0FC /* Constants.swift */; };
 		00839A0A25F71E5B009DF374 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00839A0925F71E5B009DF374 /* UserCell.swift */; };
 		00839A0D25F7293F009DF374 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00839A0C25F7293F009DF374 /* User.swift */; };
 		00839A1025F729D4009DF374 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00839A0F25F729D4009DF374 /* Service.swift */; };
@@ -54,6 +55,7 @@
 		0056215225EAB183007A75DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		00772DB72608172D00D9F0FC /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		00772DBA26081B8700D9F0FC /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
+		00772DBF2609A27A00D9F0FC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		00839A0925F71E5B009DF374 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		00839A0C25F7293F009DF374 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		00839A0F25F729D4009DF374 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				00EDB64D25DF685B0075E193 /* Extensions.swift */,
+				00772DBF2609A27A00D9F0FC /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00277AB225DDEA9D00F44213 /* ViewController.swift in Sources */,
+				00772DC02609A27A00D9F0FC /* Constants.swift in Sources */,
 				0040ABEF25E5F816001F8475 /* RegistrationViewModel.swift in Sources */,
 				00101A1A25E093F100605140 /* InputContainerView.swift in Sources */,
 				0019824C25F34F8400B37AAD /* AuthService.swift in Sources */,
