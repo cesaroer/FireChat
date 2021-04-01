@@ -30,3 +30,10 @@ struct Message {
         
     }
 }
+
+
+
+struct Conversation {
+    let user: User
+    let message: Message
+}

@@ -15,6 +15,7 @@ class ConversationsController: UIViewController {
     
     //MARK: - Properties
     private let tableView = UITableView()
+    private var conversations = [Conversation]()
     private let newMessageBtn : UIButton = {
         let button = UIButton()
         button.setImage(UIImage(systemName: "plus"), for: .normal)
@@ -32,6 +33,7 @@ class ConversationsController: UIViewController {
         super.viewDidLoad()
         configureUI()
         authenticateUser()
+        fetchConversations()
     }
     
     
@@ -52,6 +54,13 @@ class ConversationsController: UIViewController {
     }
     
     //MARK: - API
+    
+    func fetchConversations() {
+        Service.fetchConversations { (conversations) in
+            self.conversations = conversations
+            self.tableView.reloadData()
+        }
+    }
     
     func authenticateUser() {
         if Auth.auth().currentUser?.uid == nil {
@@ -131,13 +140,13 @@ class ConversationsController: UIViewController {
 
 extension ConversationsController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return self.conversations.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
-        cell.textLabel?.text = "Im the cell # \(indexPath.row)"
+        cell.textLabel?.text = conversations[indexPath.row].message.text
         return cell
     }
     
