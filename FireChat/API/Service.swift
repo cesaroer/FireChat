@@ -37,7 +37,6 @@ struct Service {
         self.fetchUsers { (users) in
             users.forEach { (user) in
                 if user.uid == uid{
-                    print("Encontramos user con uid igual")
                     completion(user)
                     return
                 }
