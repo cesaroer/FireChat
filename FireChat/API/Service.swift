@@ -82,15 +82,7 @@ struct Service {
                 let dictionary = change.document.data()
                 let message = Message(dictionary: dictionary)
                 
-//                fetchUser(with: message.toID) { (user) in
-//                    let conversation = Conversation(user: user, message: message)
-//                    conversations.append(conversation)
-//                    completion(conversations)
-//                }
                 newFetchUserWithoutDocRef(with: message.toID) { (user) in
-
-                    print("Llegamos con user \(user)")
-
                     let conversation = Conversation(user: user, message: message)
                     conversations.append(conversation)
                     completion(conversations)
