@@ -84,7 +84,6 @@ class ProfileHeader: UIView {
         
         guard let url = URL(string: user.profileImageUrl) else{return}
         profileImageView.sd_setImage(with: url)
-        
     }
     
     
