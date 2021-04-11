@@ -10,11 +10,18 @@ import Firebase
 
 private let profileControllerReuseID = "ProfileCell"
 
+protocol ProfileControllerDelegate: class {
+    func handleLogout()
+}
+
 class ProfileController: UITableViewController {
     //MARK: - Properties
     private var mUser: User? {
         didSet{ headerView.user = mUser}
     }
+    
+    weak var delegate : ProfileControllerDelegate?
+    
     private lazy var headerView = ProfileHeader(frame: .init(x: 0, y: 0,
                                                              width: view.frame.width,
                                                              height: 380))
@@ -50,10 +57,12 @@ class ProfileController: UITableViewController {
     //MARK: - Helpers
     
     func configureUI() {
-        tableView.backgroundColor = .white
         tableView.tableFooterView = footerView
+        footerView.delegate = self
         tableView.tableHeaderView = headerView
         headerView.delegate = self
+        
+        tableView.backgroundColor = .white
         tableView.register(ProfileCell.self, forCellReuseIdentifier: profileControllerReuseID)
         tableView.contentInsetAdjustmentBehavior = .never
         tableView.rowHeight = 64
@@ -61,6 +70,8 @@ class ProfileController: UITableViewController {
         
     }
 }
+
+//MARK: - UITableViewDataSource
 
 extension ProfileController {
     
@@ -77,12 +88,30 @@ extension ProfileController {
     }
 }
 
+//MARK: - UITableViewDelegate
+
 extension ProfileController {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return UIView()
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let viewModel = ProfileViewModel(rawValue: indexPath.row) else {return}
+        print("Handle for action \(viewModel.description)")
+        
+        switch viewModel {
+        case .accountInfo:
+            print("DEBUG: Show account info page")
+        case .setting:
+            print("DEBUG: Show setting page")
+        case .savedMessages:
+            print("DEBUG: Show savedMessages page")
+        }
+    }
+    
 }
+
+//MARK: - ProfileHeaderDelegate
 
 extension ProfileController: ProfileHeaderDelegate {
     func dismissController() {
@@ -90,4 +119,23 @@ extension ProfileController: ProfileHeaderDelegate {
     }
     
 }
+
+//MARK: - ProfileFooterDelegate
+
+extension ProfileController: ProfileFooterDelegate {
+    func handleLogout() {
+        let alert = UIAlertController(title: nil, message: "Are you sure you want to logout", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Logout", style: .destructive, handler: { _ in
+            self.dismiss(animated: true) {
+                self.delegate?.handleLogout()
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        present(alert, animated: true, completion: nil)        
+    }
+    
+    
+}
+
 

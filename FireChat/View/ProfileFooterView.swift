@@ -7,8 +7,14 @@
 
 import UIKit
 
+protocol ProfileFooterDelegate: class {
+    func handleLogout()
+}
+
 class ProfileFooterView: UIView {
     //MARK: - Properties
+    public weak var delegate : ProfileFooterDelegate?
+    
     private lazy var logoutButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Logout", for: .normal)
@@ -38,6 +44,6 @@ class ProfileFooterView: UIView {
     
     //MARK: - Methods
     @objc func handleTouch() {
-        print("Touched")
+        delegate?.handleLogout()
     }
 }
