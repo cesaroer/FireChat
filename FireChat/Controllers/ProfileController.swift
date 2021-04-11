@@ -18,6 +18,8 @@ class ProfileController: UITableViewController {
     private lazy var headerView = ProfileHeader(frame: .init(x: 0, y: 0,
                                                              width: view.frame.width,
                                                              height: 380))
+    private lazy var footerView = ProfileFooterView(frame:
+                                                        CGRect(x: 0, y: 0, width: view.frame.width, height: 120))
     
     //MARK: - Lifecycle
     
@@ -49,13 +51,14 @@ class ProfileController: UITableViewController {
     
     func configureUI() {
         tableView.backgroundColor = .white
+        tableView.tableFooterView = footerView
         tableView.tableHeaderView = headerView
         headerView.delegate = self
         tableView.register(ProfileCell.self, forCellReuseIdentifier: profileControllerReuseID)
-        tableView.tableFooterView = UIView()
         tableView.contentInsetAdjustmentBehavior = .never
         tableView.rowHeight = 64
         tableView.backgroundColor = .systemGroupedBackground
+        
     }
 }
 

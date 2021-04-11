@@ -10,11 +10,13 @@ import UIKit
 enum ProfileViewModel: Int, CaseIterable {
     case accountInfo
     case setting
+    case savedMessages
     
     var description: String {
         switch self {
             case .accountInfo: return "Account Info"
             case .setting: return "Setting"
+            case .savedMessages: return "Favorite Messages"
         }
     }
     
@@ -22,6 +24,7 @@ enum ProfileViewModel: Int, CaseIterable {
         switch self {
             case .accountInfo: return "person.circle"
             case .setting: return "gear"
+            case .savedMessages: return "heart.circle"
         }
     }
     
